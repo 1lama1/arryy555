@@ -15,17 +15,18 @@ public class arry {
     public static void main(String[] args) {
         int[] arr = generateRandomArray () ;
         //Задача 1
+        int sum = 0;
         for (int i = 0; i < arr.length-1; i++) {
-            if (arr[i + 1] > arr[i]) {
-                System.out.println("Сумма трат за месяц составила " + (arr[i + 1] - arr[i]) + " рублей");
+                sum += arr[i];
             }
-        }
+        System.out.println("Сумма трат за месяц составила " + sum + " рублей");
+
+
 
         //Задача 2
-        int[] dayArr = {23, 24, 50, 77, 76, 30, 230, 111, 555};
-        int maxSum = -1;
-        int minSum = 1000;
-        for (final int arrySum : dayArr) {
+        int maxSum = arr[0];
+        int minSum = arr[0];
+        for (final int arrySum : arr) {
             if (arrySum > maxSum) {
                 maxSum = arrySum;
             }if (arrySum< minSum){
@@ -39,11 +40,11 @@ public class arry {
 
 
         //Задача 3
-        double e = 0;
+        double sum2 = 0;
         for (int i = 0; i < arr.length; i++) {
-             e += arr[i];
+             sum2 += arr[i];
         }
-        System.out.println("Средняя сумма трат за месяц составила "+e/arr.length+"  рублей");
+        System.out.println("Средняя сумма трат за месяц составила "+sum2/arr.length+"  рублей");
 
 
 
